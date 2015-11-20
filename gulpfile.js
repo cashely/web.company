@@ -9,6 +9,7 @@ var rename = require('gulp-rename');
 var concatCss = require('gulp-concat-css');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var prefixer = require('gulp-autoprefixer');
 gulp.task('miniJs',function(){
     gulp.src('src/js/*.js')
         .pipe(miniJs())
@@ -19,6 +20,7 @@ gulp.task('miniJs',function(){
 });
 gulp.task('miniCss',function(){
     gulp.src('src/style/*.css')
+        .pipe(prefixer({ browsers: ['> 1%', 'IE 7'], cascade: false }))
         .pipe(concatCss('common.css'))
         .pipe(miniCss())
         .pipe(rename(function(path){

@@ -20,7 +20,7 @@ gulp.task('miniJs',function(){
 });
 gulp.task('miniCss',function(){
     gulp.src('src/style/*.css')
-        .pipe(prefixer({ browsers: ['> 1%', 'IE 7'], cascade: false }))
+        .pipe(prefixer({ browsers: ['> 1%', 'IE 8'], cascade: false }))
         .pipe(concatCss('common.css'))
         .pipe(miniCss())
         .pipe(rename(function(path){
@@ -36,4 +36,4 @@ gulp.task('minimage',function(){
         }))
         .pipe(gulp.dest('dist/images'));
 })
-gulp.task('default',['miniJs','miniCss','minimage']);
+gulp.task('default',['miniJs','miniCss']);

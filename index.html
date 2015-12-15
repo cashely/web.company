@@ -2,12 +2,15 @@
 <html>
 
 <head>
-    <title>Untitled Document</title>
+    <title>电子预警软件－专享计划－医睦科技</title>
     <meta charset="UTF-8">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-<!--    <link rel="stylesheet" href="dist/style/style.css" type="text/css" media="screen" />-->
+    <link href="favicon.png" mce_href="favicon.png" rel="bookmark" type="image/x-icon" />
+    <link href="favicon.png" mce_href="favicon.png" rel="icon" type="image/x-icon" />
+    <link href="favicon.png" mce_href="favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="dist/style/common.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -39,6 +42,9 @@
                     <div class="top"><img src="dist/images/bg_ts_01.png" /></div>
                     <h3>安全规则自定义，可视化设计界面</h3>
                     <div class="bottom"><img src="dist/images/bg_ts_02.png" /></div>
+                    <h3>BI决策分析</h3>
+                    <div class="bottom"><img src="dist/images/bg_ts_03.png" /></div>
+                    <div class="bottom" style="margin-top:30px"><img src="dist/images/bg_ts_04.png" /></div>
                 </div>
                 <div class="contrast scroll">
                     <h2></h2>
@@ -83,22 +89,24 @@
                                         <td align="right">数据匹配服务</td>
                                         <td colspan="2" align="left">2000</td>
                                     </tr>
+                                    <!--
                                     <tr>
                                         <td width="90" align="right">实施工程师</td>
                                         <td align="left" width="100">500</td>
                                         <td align="right">每人天</td>
                                     </tr>
+-->
                                     <tr>
-                                        <td align="right">实施顾问</td>
+                                        <td align="right" width="90">实施顾问</td>
                                         <td align="left">800</td>
-                                        <td align="right">每人天</td>
+                                        <td align="center">每人天</td>
                                     </tr>
                                     <tr>
                                         <td align="right">差旅费</td>
-                                        <td colspan="2" align="left">按实际发生计算</td>
+                                        <td colspan="2" align="left">按实际发生(交通费、住宿费)计算</td>
                                     </tr>
                                 </table>
-                                <p>项目成功实施的最高成本核算</br>2000 + 800 * 5 = 4000 元 + 实际发生差旅费</p>
+                                <p>项目成功实施的最高成本核算</br>2000 + 800 * 5 = 6000 元 + 实际发生差旅费</p>
                             </div>
                         </div>
                     </div>
@@ -107,11 +115,11 @@
                     <h1></h1>
                     <div class="contact-content">
                         <div class="left">
-                            <p>
-                                <input type="text" class="required" placeholder="姓名 必填" />
+                            <p class="required-box">
+                                <input type="text" class="required" placeholder="姓名" />
                             </p>
-                            <p>
-                                <input type="text" class="required" placeholder="联系电话 必填" />
+                            <p  class="required-box">
+                                <input type="text" class="required" placeholder="联系电话" />
                             </p>
                             <p>
                                 <input type="text" placeholder="邮箱" />
@@ -123,7 +131,9 @@
                                 <textarea placeholder="留言（写下您的疑问、建议和任何您想说的）"></textarea>
                             </p>
                             <p><a href="javascript:void();" class="sub-offer" onclick="showBook();">提交</a></p>
+                            <a href="form.html" class="sub-offer mobile-sub">点击联系我们</a>
                         </div>
+
                         <div class="right">
                             <h4>成功提交信息可获取1对1优质服务。<br>并获取以下资料</h4>
                             <ul>
@@ -136,8 +146,8 @@
                     </div>
                 </div>
                 <div class="footer">
-                    <p class="about"><span class="tel">020-2812-1866</span><span class="address">广州市天河区珠江新城保利克洛维</span></p>
-                    <p>Copyright © 2015 - 2016 YM All Rights Reserved</p>
+                    <p class="about"><span class="tel">020-28121851</span><span class="fax">020-28121855</span><span class="address">广州市天河区珠江新城保利克洛维</span></p>
+                    <p>Copyright © 2015 - 2016 IMMO All Rights Reserved</p>
                 </div>
             </div>
         </div>
@@ -147,7 +157,7 @@
         <span class="back"></span>
     </div>
     <!--    layer-->
-    <div class="layer">
+    <div class="layer l">
         <div class="layer-bg"></div>
         <div class="layer-content">
             <button class="close"></button>
@@ -155,10 +165,13 @@
             <p>客服人员会在24小时内为您发送邮件，并与您取得联系。感谢您对本产品的关注！</p>
         </div>
     </div>
+    <!--    layer-->
+
     <!--    script-->
     <script src="dist/js/jquery.min.js"></script>
-    <script src="dist/js/common.min.js"></script>
-<!--[if lte IE 9]>
+        <script src="dist/js/common.min.js"></script>
+<!--    <script src="src/js/common.js"></script>-->
+    <!--[if lte IE 9]>
     <script>
         !(function($){
             var inputVal;

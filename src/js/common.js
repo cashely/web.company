@@ -38,5 +38,8 @@ var fnzx = function () {
     $('html,body').animate({scrollTop:$('.banner-plan').offset().top},800);
 }
 $(document).on("click", '.layer-bg,button.close', function () {
-    $('.layer').hide();
+    $(this).parents('.l').hide();
+});
+$(document).on('click','a.mobile-sub',function(){
+    $('.subform').show();
 });

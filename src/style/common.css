@@ -8,6 +8,9 @@ body {
 body {
     font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
 }
+input,textarea{
+    box-sizing: border-box;
+}
 .header {
     box-shadow: 0 0 3px #000;
     position: fixed;
@@ -126,6 +129,7 @@ li.new a {
     float: left;
     width: 351px;
     height: 424px;
+    perspective:10000px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -149,7 +153,7 @@ li.new a {
     
 }
 img.f{
-    animation: roundF 20s infinite alternate;
+    animation: roundF 10s infinite alternate;
     opacity: 1;
     opacity: 0\0;/*ie9*/
     opacity: 0\9;/*ie8*/
@@ -164,7 +168,7 @@ img.t{
     *opacity: 1;
     padding-top: 30px;
     padding-left: 20px;
-    animation: roundT 20s infinite alternate;
+    animation: roundT 10s infinite alternate;
 }
 @keyframes roundF{
     0%{
@@ -441,7 +445,7 @@ img.t{
     text-align: center;
     line-height: 2;
     font-size: 12px;
-    padding-top: 70px;
+    padding-top: 110px;
     background: url(../images/logo.png) center 30px no-repeat;
 }
 .footer .about{
@@ -466,6 +470,11 @@ span.tel{
 }
 span.address{
     background-position: -45px -85px;
+}
+span.fax{
+    border-right: 1px solid #383838;
+    background-position: -45px -194px;
+    padding-right: 20px;
 }
 .intro-service,
 .charge {
@@ -507,7 +516,7 @@ span.address{
 .charge .right {
     float: right;
     line-height: 2;
-    width: 300px;
+    width: 340px;
     padding-right: 50px;
     transform: translate3d(50%, 0, 0);
     opacity: 0;
@@ -543,7 +552,7 @@ span.address{
     text-align: center;
 }
 .contact-content input,
-.contact-content textarea {
+.contact-content textarea,.subform input,.subform textarea {
     padding: 10px 20px;
     border-radius: 5px;
     width: 300px;
@@ -552,15 +561,27 @@ span.address{
     margin-bottom: 1px;
 }
 .contact input.required{
-    border-color: #F3B7B7;
+/*    border-color: #F3B7B7;*/
 }
-
-.contact-content textarea {
+.required-box{
+    position: relative;
+}
+.required-box:before{
+    position: absolute;
+    left: 7px;
+    display: table;
+    line-height: 41px;
+    content: '*';
+    color: red;
+    
+}
+.contact-content textarea,.subform textarea {
     height: 120px;
 }
 .sub-offer {
     background-color: #2f8cd9;
     padding: 10px 15px;
+    text-align: center;
     color: #fff;
     border-radius: 5px;
     display: block;
@@ -600,7 +621,7 @@ span.address{
 }
 .banner-plan-content .t-f {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     transform: scale(0);
     opacity: 0;
     transition: all 1s ease-out;
@@ -649,6 +670,9 @@ span.address{
     top: 0;
     z-index: 99;
 }
+.layer{
+z-index: 999;
+}
 .layer-bg{
     background-color: rgb(0,0,0);
     opacity: 0.3;
@@ -685,7 +709,7 @@ span.address{
 .layer-content button.close{
     position: absolute;
     right: 5px;
-    top: 15px;
+    top: 5px;
     border-width: 0;
     background-color: transparent;
 }
@@ -693,7 +717,7 @@ span.address{
     display: block;
     content: "\00D7";
     color: black;
-    line-height: 0;
+    line-height: 1;
     cursor: pointer;
     font-size: 25px;
     color: #bbb;
@@ -775,4 +799,38 @@ span.address{
 .feature.scroll .top,.feature.scroll .bottom{
     transform: scale(0);
     opacity: 0;
+}
+.subform input,.contact input,.subform textarea{
+    width: 100%;
+}
+.mobile-sub{
+    display: none;
+}
+.subform .layer-content{
+    padding-top: 50px;
+    width: 80%;
+}
+.subform{
+    padding: 0 10px;
+}
+.subform p{
+    margin: 15px 0;
+}
+@media screen and (max-width:1000px){
+    .contact{
+    }
+    .contact-content .left p{
+        display: none;
+    }
+    .mobile-sub{
+        margin: 120px 0 0 120px;
+        display: inline-block;
+        font-size: 24px;
+        padding: 50px;
+        text-align: center;
+        color: #fff;
+    }
+    .layer-content{
+        width: 80%;
+    }
 }

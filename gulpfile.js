@@ -36,5 +36,5 @@ gulp.task('minimage',function(){
         }))
         .pipe(gulp.dest('dist/images'));
 })
-gulp.task('default',['miniJs','miniCss','minimage']);
-//gulp.task('default',['miniJs','miniCss']);
+//gulp.task('default',['miniJs','miniCss','minimage']);
+gulp.task('default',['miniJs','miniCss']);

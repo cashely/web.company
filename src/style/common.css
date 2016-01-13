@@ -55,15 +55,34 @@ ul,li{
     padding-top: 65px;
     width: 100%;
 }
+.banner-hmms{
+    background: url(../images/banner_hmms.png) center 0 repeat-x #1e94d4;
+    height: 548px;
+    width: 100%;
+}
+.banner-hpms{
+    background: url(../images/banner_hpms.png) center 0 repeat-x #1e94d4;
+    height: 459px;
+    width: 100%;
+}
+.banner-hmms-content .hmms-logo{
+    margin-top: 20px;
+    float: left;
+}
+.banner-hpms-content .hpms-logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .banner-content,
 .banner-plan-content,
 .header-content,
 .content-main,
 .intro-service-content,
 .charge-content,
-.contact-content {
+.contact-content,.banner-hmms-content,.content-box,.banner-hpms-content{
     width: 950px;
     margin: 0 auto;
+    text-align: center;
 }
 .header-content:after,
 .header:after,
@@ -235,6 +254,7 @@ img.t{
 }
 .banner-content .right {
     float: right;
+    text-align: left;
     margin: 63px 0 0 30px;
     -moz-transform: translate3d(50%, 0, 0);
     -webkit-transform: translate3d(50%, 0, 0);
@@ -304,6 +324,7 @@ img.t{
     padding-top: 20px;
     background: url(../images/bg_comment.png) left 35px no-repeat;
     min-height: 130px;
+    text-align: left;
     color: #4d4d4d;
 }
 .comment-content li {
@@ -315,6 +336,7 @@ img.t{
 }
 .container {
     overflow: hidden;
+    text-align: left;
 }
 .container.scroll {
     -moz-transform: translate3d(0, -67px, 0);
@@ -596,9 +618,9 @@ span.fax{
 }
 .contact-content .right {
     position: relative;
-    left: 100px;
     padding-top: 30px;
-    padding-left: 420px;
+    padding-left: 20px;
+    text-align: left;
 }
 .contact-content .right h4 {
     font-size: 20px;
@@ -815,6 +837,96 @@ z-index: 999;
 }
 .subform p{
     margin: 15px 0;
+}
+.box-title-round h2,.box-title-line h2{
+    line-height: 3;
+    position: relative;
+    text-align: center;
+    margin: 15px auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #b2b2b2;
+}
+.box-title-round h2{
+    width: 40%;
+}
+.box-title-line h2{
+    width: 100%;
+    color: #448aca;
+}
+.box-title-line h3{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    border:1px solid #00479d;
+}
+.box-title-line h2:after{
+    content: '';
+    background-color: #448aca;
+    display: table;
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10%;
+    bottom: -2px;
+}
+.box-title-round h2:after{
+    content: '';
+    background-color: #fff;
+    border-radius: 20px;
+    display: table;
+    width: 11px;
+    height: 11px;
+    border:1px solid #000;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    bottom: -7px;
+}
+.box-title-round h2 ~ p,.box-title-line h2 ~ p{
+    line-height: 1.5;
+    margin: 20px auto;
+    width: 85%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.img-box{
+    margin-top:40px;
+    padding-bottom: 30px;
+}
+.img-box:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.yyaqgz {
+    width: 90%;
+    margin: 0 auto;
+}
+.yyaqgz .right{
+    margin-top: 70px;
+}
+.rjts{
+    padding-top: 50px;
+}
+.rjts .left{
+    margin-top: 40px;
+}
+.cpjj .text{
+    width: 40%;
+    padding-top: 150px;
+    font-size: 16px;
+    line-height: 1.5;
+    background: url(../images/bg_hpms_img06.png) center 10px no-repeat;
+    text-align: justify;
+}
+.cpjj .text > span{
+    font-size: 20px;
+    color: #88c239;
 }
 @media screen and (max-width:1000px){
     .contact{
